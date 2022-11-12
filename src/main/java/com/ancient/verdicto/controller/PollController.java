@@ -23,13 +23,13 @@ public class PollController {
         this.pollService = pollService;
     }
 
-    @ResponseBody
+    //@ResponseBody No longer required since RestController is used
     @GetMapping("/allPolls")
     public Set<Poll> getAllPolls(){
         return pollService.getAllPolls();
     }
 
-    @ResponseBody
+    //@ResponseBody No longer required since RestController is used
     @GetMapping("/todaysPoll")
     public Poll getTodaysPoll(@RequestParam long userId){
         return pollService.getTodaysPoll();
